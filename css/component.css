@@ -1,5 +1,9 @@
 /* Icon font for arrow icons */
 @font-face {
+	font-family: 'IBM Plex Mono', monospace;
+}
+
+@font-face {
 	font-family: 'icomoon';
 	src:url('../fonts/icomoon_arrows/icomoon.eot');
 	src:url('../fonts/icomoon_arrows/icomoon.eot?#iefix') format('embedded-opentype'),
@@ -24,22 +28,22 @@
 
 .cbp-ntaccordion .cbp-nttrigger {
 	cursor: pointer;
-} 
+}
 
 .cbp-ntaccordion h3 {
 	margin: 0 0 0.3em;
 	padding: 1em 0 0.5em;
 	border-bottom: 1px solid #ddd;
-	font-size: 2.75em;
-	font-weight: 300;
+	font-size: 2em;
+	font-weight: 400;
 }
 
 .cbp-ntaccordion h4 {
 	font-size: 1.2em;
 	text-transform: uppercase;
-	letter-spacing: 0.4em;
 	padding: 0.5em 0 0.5em;
 	margin: 0 0 0.5em;
+	font-weight: 400;
 }
 
 .cbp-ntaccordion h5 {
@@ -90,15 +94,15 @@
 }
 
 .cbp-ntsubaccordion > li > .cbp-nttrigger:before {
-	content: "\32";
+	content: "\36";
 }
 .cbp-ntsubaccordion > li > .cbp-nttrigger:hover:before {
-	content: "\33";
+	content: "\35";
 	color: inherit;
 }
 .cbp-ntsubaccordion > li.cbp-ntopen > .cbp-nttrigger:before,
 .no-js .cbp-ntsubaccordion > li > .cbp-nttrigger:before {
-	content: "\31";
+	content: "\34";
 	color: inherit;
 }
 
@@ -116,7 +120,7 @@
 }
 
 /* Example for media query */
-@media screen and (max-width: 32em) { 
+@media screen and (max-width: 32em) {
 
 	.cbp-ntaccordion {
 		font-size: 70%;
