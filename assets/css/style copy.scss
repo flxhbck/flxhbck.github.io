@@ -1,0 +1,298 @@
+/* Write your CSS! */
+
+@font-face {
+    font-family: 'Metric-Regular';
+    src: url(assets/font/Metric-Regular.eot?#iefix) format('embedded-opentype'),
+    url(assets/font/Metric-Regular.otf) format('opentype'),
+    url(assets/font/Metric-Regular.woff) format('woff'),
+    url(assets/font/Metric-Regular.ttf) format('truetype'),
+    url(assets/font/Metric-Regular.svg#Metric-Regular) format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.clearfix {
+  clear: both;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: 'Metric-Regular';
+  margin: 0 15%;
+  background-color: white;
+}
+
+header{
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-top: 0px;
+  padding-bottom: 10px;
+
+  width: 70vw;
+  font-family: 'Metric-Regular';
+
+  height: 50px;
+  background-color: white;
+}
+
+header h1 {
+  position: absolute;
+  bottom: 12px;
+
+  font-weight: 500;
+  font-size: 1.5em;
+  float: left;
+}
+
+nav {
+  position: absolute;
+  bottom: 12px;
+  right: 15%;
+  display: table-cell;
+  font-weight: 500;
+  float: right;
+  vertical-align: baseline;
+}
+
+nav a {
+  font-size: 1.4em;
+  margin-right: 20px;
+  color: black;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-image: url("assets/svg/hover.svg");
+  background-position: 0 100%;
+  background-size: auto 4px;
+  background-repeat: repeat-x;
+
+  text-decoration: none;
+}
+
+
+
+
+.gridcontainer {
+  width: 100%;
+  display: grid;
+  grid-gap: 1vw;
+  grid-template-columns: repeat(3, 32%);
+  align-content: center;
+  justify-content: center;
+}
+
+
+
+#Hero {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  width: 100%;
+  height: 70vh;
+  background-color: grey;
+  align-items: center;
+}
+
+#Hero p{
+  font-family: 'Metric-Regular';
+  font-size: 2.5em;
+  align-self: center;
+}
+
+#Hero #sub {
+  font-family: 'Metric-Light';
+  font-size: 1.5em;
+}
+
+#Hero #small {
+  font-family: 'Metric-Light';
+  font-size: 0.6em;
+  color: lightgrey;
+}
+
+
+.summary{
+  margin-top: 7%;
+  margin-bottom: 0.2em;
+  font-size: 1.5em;
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.summary p {
+  margin: 0 0;
+  line-height: 1.2em;
+}
+
+section p a{
+  background-image: url("assets/svg/a-grey.svg");
+  background-position: 0 90%;
+  background-size: auto 2px;
+  background-repeat: repeat-x;
+
+  text-decoration: none;
+  color: black;
+}
+
+section p a:hover, section p a:focus, {
+
+  background-image: none;
+  background-color: #111;
+  color: white;
+
+  text-decoration: none;
+  border-top: solid 4px #111;
+  border-left: solid 4px #111;
+  border-right: solid 4px #111;
+
+  margin-left: -4px;
+  margin-right: -4px;
+
+  outline: none;
+}
+
+
+
+
+.project {
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.project > a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  text-shadow: black
+}
+
+.project > a:hover, .project > a:focus {
+  color: white;
+  background-color: #111;
+}
+
+.project video {
+  object-fit: cover;
+  height: 47vh;
+}
+
+.project p {
+  text-align: left;
+  text-decoration: none;
+  font-size: 1.5em;
+  margin-top: 0.5em;
+  margin-bottom: 0.7em;
+  padding: 0 5%;
+
+  position: relative;
+  top: -7vh;
+  overflow: hidden;
+  margin-bottom: -7vh;
+}
+
+
+
+.project a:hover > p > span , .project a:focus > p > span{
+
+  background-image: url("assets/svg/hoverwhite.svg");
+  background-position: 0 100%;
+  background-size: auto 4px;
+  background-repeat: repeat-x;
+  color: white;
+
+  text-decoration: none;
+  outline: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width : 320px) and (max-width : 600px) {
+
+
+
+  /* Styles for mobile */
+  body{
+    margin: 0 5%;
+  }
+
+  header{
+    position:absolute;
+  }
+
+  .gridcontainer {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-columns: 100%;
+    grid-gap: 1%;
+  }
+
+  #Hero {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  #summary {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+
+  }
+
+@media only screen and (min-width : 600px) and (max-width : 1024px) {
+
+  /* Styles for tablet */
+
+  body {
+    margin: 0 10%;
+  }
+
+  .gridcontainer {
+    grid-template-columns: repeat(2, 49.5%);
+    grid-gap: 1%;
+    grid-auto-rows: auto;
+  }
+
+  #Hero {
+    grid-column-start: 1;
+    grid-column-end: 3
+  }
+
+  #summary {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
+
+  /* Don't forget your Retina CSS! */
+
+  body {
+    background-size: 72px 72px;
+  }
+
+}

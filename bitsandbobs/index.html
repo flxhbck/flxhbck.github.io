@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>flxhbck ~ bits & bobs</title>
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="Felix Heibeck" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<script src="js/modernizr.custom.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<header class="clearfix">
+				<h1>flxhbck ~ bits & bobs</h1>
+			</header>
+			<div class="main">
+				<ul id="cbp-ntaccordion" class="cbp-ntaccordion">
+
+					 <li>
+						<h3 class="cbp-nttrigger">IO Molecule</h3>
+						<div class="cbp-ntcontent">
+							<p>IO Molecule is a simple breakout board for exploring interaction & experience design. It's basically a breakout board for the Adafruit Feather platform with JST-SH connectors and some onboard components.</p>
+							<ul class="cbp-ntsubaccordion">
+								<li>
+									<h4 class="cbp-nttrigger">Setup</h4>
+									<div class="cbp-ntcontent">
+										<p>
+											Download the <a href="https://www.arduino.cc/en/Main/Software">Arduino IDE</a> <br/>
+											Follow the steps in <a href="https://learn.adafruit.com/adafruit-feather-32u4-bluefruit-le/setup">this tutorial</a> to install the Adafruit Boards in the IDE<br/>
+											Select the Adafruit Bluefruit Micro board from Tools > Board <br/>
+											Select the correct serial port from Tools > Port <br/>
+											Open the Blink Example from Files > Examples > 01.Basics > Blink <br/>
+											Press the 'upload' icon on the top left and see if it works. <br/>
+											Now download or copy <a href="https://github.com/flxhbck/teaching-material/blob/master/molecule-io/arduino%20template/IOMolecule/IOMolecule.ino">this template project</a> into a sketch and get going! <br/>
+											If you don't have the Neopixel Library, go to Sketch > Include Library > Manage Libraries and install the Adafruit NeoPixel Library.
+										</p>
+									</div>
+								</li>
+
+
+								<li>
+									<h4 class="cbp-nttrigger">Pinout</h4>
+									<div class="cbp-ntcontent">
+										<p>
+											You can read which Arduino pins belong to which connector on the <a href="https://github.com/flxhbck/teaching-material/blob/master/molecule-io/arduino%20template/IOMolecule/IOMolecule.ino">template file</a>. <br/>
+											For more details, check out the <a href="https://flxhbck.github.io/img/molecule-io.pdf">(somewhat messy) schematic</a>.
+										</p>
+									</div>
+								</li>
+
+								<li>
+									<h4 class="cbp-nttrigger">Inputs</h4>
+									<div class="cbp-ntcontent">
+										<p>
+											There are 3 different kind of connectors with 2, 3 & 4 wires each. The black wire is always the ground connection and index 0.<br/>
+											Button: solder the two wires diagonally. <br/>
+											Potentiometer: 0 - Left, 1 - Middle, 2 - Right <br/>
+											<a href="https://www.digikey.se/short/jvvvm2">Button (onboard)</a> <br/>
+											<a href="https://www.digikey.se/short/jvvvh0">Button (external)</a> <br/>
+											<a href="https://www.digikey.se/short/jvvvmb">Potentiometer (onboard)</a> <br/>
+											<a href="https://www.digikey.se/short/jvvv9j">Potentiometer (external)</a> <br/>
+											<a href="https://www.adafruit.com/product/165">Temperature Sensor</a> <br/>
+											<a href="https://www.adafruit.com/product/3387">9 DOF IMU</a> <br/>
+											<a href="https://www.adafruit.com/product/1063">Microphone</a> <br/>
+											<a href="https://www.adafruit.com/product/466">Proximity / Light Sensor</a><br/>
+											<a href="https://www.adafruit.com/product/1334">Color Sensor</a> <br/>
+											<a href="https://www.digikey.se/short/jvvvmv">Motion Sensor</a> <br/>
+											<a href="https://www.adafruit.com/product/2748">Light Sensor</a> <br/>
+											<a href="https://www.digikey.se/short/jvvvh4">Magnetic Switch</a> <br/>
+											<a href="https://www.digikey.se/short/jvvv9r">Force Sensing Resistor</a> <br/>
+
+										</p>
+									</div>
+								</li>
+
+								<li>
+									<h4 class="cbp-nttrigger">Outputs</h4>
+									<div class="cbp-ntcontent">
+										<p>
+											<a href="https://www.digikey.se/short/jvvv88">LED </a><br/>
+											<a href="https://www.digikey.se/short/jvvvqd">Piezo </a> <br/>
+											<a href="https://www.digikey.se/short/jvvv82">360 Servo </a><br/>
+											<a href="https://www.adafruit.com/product/711">DC Motor </a><br/>
+											<a href="https://www.adafruit.com/product/1201">Vibrating Mini Motor </a><br/>
+											<a href="https://www.adafruit.com/product/1426">Neopixel Bar</a><br/>
+											<a href="https://www.adafruit.com/product/2226">Neopixel Diamond </a><br/>
+											<a href="https://www.adafruit.com/product/1643">Neopixel Ring</a>
+										</p>
+									</div>
+								</li>
+
+
+						</div>
+					</li>
+
+
+
+
+
+
+
+
+
+
+					<li>
+						<h3 class="cbp-nttrigger">Hyper Island - Experience Prototyping (Nov 2018)</h3>
+						<div class="cbp-ntcontent">
+							<p>A two-day workshop for the Hyper Island Digital Media program that explores the physical digital continuum.</p>
+							<ul class="cbp-ntsubaccordion">
+								<li>
+									<h4 class="cbp-nttrigger">Video Summary</h4>
+									<div class="cbp-ntcontent">
+										<p>
+											<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/BqsXcFmnRfg/?utm_source=ig_embed&amp;utm_medium=loading" data-instgrm-version="12" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/BqsXcFmnRfg/?utm_source=ig_embed&amp;utm_medium=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div><div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;"> Sieh dir diesen Beitrag auf Instagram an</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/BqsXcFmnRfg/?utm_source=ig_embed&amp;utm_medium=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">Ein Beitrag geteilt von felix makes (@felixmakes_)</a> am <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2018-11-27T18:11:19+00:00">Nov 27, 2018 um 10:11 PST</time></p></div></blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+										</p>
+										</div>
+								</li>
+
+								<li>
+									<h4 class="cbp-nttrigger">Brief 1: Create a signal that travels from digital to physical</h4>
+									<div class="cbp-ntcontent">
+										<p>Focus on creating something that has very low friction between the digital input and the physical output.</p>
+										</div>
+								</li>
+								<li>
+									<h4 class="cbp-nttrigger">Brief 2: Create a signal that travels from physical to digital.</h4>
+									<div class="cbp-ntcontent">
+										<p>
+											Make an input device. Explore the relationship between interaction with the input device and the action it triggers on the computer.
+											Explore the affordances for your input. Think about these questions: What do you think you could do with it? What gestures do you do intuitively? What cultural references come to mind?
+										</p>
+										<p>
+											To get started, go to Sketch > Include Library > Manage Libraries and install the 'HID-Project' Library. <br/>
+											Make a new sketch and copy this <a href="https://github.com/flxhbck/teaching-material/blob/master/molecule-io/arduino%20templates/HID-Molecule/HID-Molecule.ino">HID molecule template code</a> into it. <br/>
+											For more info about HID commands, you can check the <a href="https://github.com/NicoHood/HID/wiki">HID-project documentation</a>. <br/>
+											You will probably have reselect the port after every time you upload since the arduino will reboot as an HID device.
+										</p>
+										<p>Overall, we recommend to test your inputs without the HID functionality first, as it can be quite tricky to fix bugs :)</p>
+									</div>
+								</li>
+
+
+								<li>
+									<h4 class="cbp-nttrigger">Brief 3: Create a game that spans both digital and physical.</h4>
+									<div class="cbp-ntcontent">
+										<p>You decide what components are physical and which ones are digital. Try to think outside the normal 'sitting still and using your hands' type of games.</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</li>
+
+
+
+
+
+
+
+
+
+
+					<li>
+						<h3 class="cbp-nttrigger">Malm&ouml; University - Experiene Prototyping (SS 2018)</h3>
+						<div class="cbp-ntcontent">
+							<p>Interactive Product Design is about how we use, experience and understand technological products. In this course we will be exploring how we can use design and engineering to explore interactive products.</p>
+
+							<ul class="cbp-ntsubaccordion">
+								<li>
+									<h4 class="cbp-nttrigger">Introduction</h4>
+									<div class="cbp-ntcontent">
+										<p>
+											Designers of interactive products create behaviours that link the digital with the physical. We define how actions and events are organised and sequenced over time. We also design how these products communicate to people. In this course you will gain a basic knowledge of materials, approaches and methods for Interactive Product Design. You will begin to comprehend the complexity of interactive systems, and to be able to design and prototype simplified, logical, satisfying, even delightful experiences. You will be able to communicate and document your interactive design work through sketching, prototyping, and presentations.
+										</p>
+									</div>
+								</li>
+
+
+								<li>
+									<h4 class="cbp-nttrigger">Inputs</h4>
+									<div class="cbp-ntcontent">
+										<p>
+											There are 3 different kind of connectors with 2, 3 & 4 wires each. The black wire is always the ground connection and index 0.<br/>
+											Button: solder the two wires diagonally. <br/>
+											Potentiometer: 0 - Left, 1 - Middle, 2 - Right <br/>
+											<a href="https://www.digikey.se/short/jvvvm2">Button (onboard)</a> <br/>
+											<a href="https://www.digikey.se/short/jvvvh0">Button (external)</a> <br/>
+											<a href="https://www.digikey.se/short/jvvvmb">Potentiometer (onboard)</a> <br/>
+											<a href="https://www.digikey.se/short/jvvv9j">Potentiometer (external)</a> <br/>
+											<a href="https://www.adafruit.com/product/165">Temperature Sensor</a> <br/>
+											<a href="https://www.adafruit.com/product/3387">9 DOF IMU</a> <br/>
+											<a href="https://www.adafruit.com/product/1063">Microphone</a> <br/>
+											<a href="https://www.adafruit.com/product/466">Proximity / Light Sensor</a><br/>
+											<a href="https://www.adafruit.com/product/1334">Color Sensor</a> <br/>
+											<a href="https://www.digikey.se/short/jvvvmv">Motion Sensor</a> <br/>
+											<a href="https://www.adafruit.com/product/2748">Light Sensor</a> <br/>
+											<a href="https://www.digikey.se/short/jvvvh4">Magnetic Switch</a> <br/>
+											<a href="https://www.digikey.se/short/jvvv9r">Force Sensing Resistor</a> <br/>
+
+										</p>
+									</div>
+								</li>
+
+								<li>
+									<h4 class="cbp-nttrigger">Brief 2: Design a single purpose input device</h4>
+									<div class="cbp-ntcontent">
+										<p>
+											<b>Design an input device made for a special purpose.</b> Explore the relationship between interaction with the input device and the action it triggers on the computer. Start with the sensors you have, but also explore other sensors that might work for your interaction and make prototypes.
+										</p>
+										<p>
+											<b>Look at the affordances of materials and shapes.</b> When you evaluate your ideas, think about some of these questions: When you look at it, what do you think you could do with it? When you manipulate it, what gestures do you do intuitively? When you think of it, what cultural references come to mind?
+										</p>
+										<p>
+											<b>Use your newly learned electronics and Arduino skills</b> to wire up the sensor(s) you need for your input device and use the template we provided to trigger keyboard actions. There are different keyboard shortcuts for Mac and Windows. Most apps also have their own shortcuts. <br/>
+											Remember, make and document lots of quick mockups, do iterations. Don’t make a polished design first, but test out your interactions using low-fi prototypes. Make sure to pick an idea in time so you can still make one somewhat polished prototype you can demo in class.
+										</p>
+										<p>
+											<b>Have the prototype ready to demo for the Seminar</b> on Friday, April 27th and make sure to send us a link to your documentation on Tumblr before that. Please include at least one gif of the final product that we can share on the course website.
+										</p>
+
+									</div>
+								</li>
+
+								<li>
+									<h4 class="cbp-nttrigger">Outputs</h4>
+									<div class="cbp-ntcontent">
+										<p>
+											<a href="https://www.digikey.se/short/jvvv88">LED </a><br/>
+											<a href="https://www.digikey.se/short/jvvvqd">Piezo </a> <br/>
+											<a href="https://www.digikey.se/short/jvvv82">360 Servo </a><br/>
+											<a href="https://www.adafruit.com/product/711">DC Motor </a><br/>
+											<a href="https://www.adafruit.com/product/1201">Vibrating Mini Motor </a><br/>
+											<a href="https://www.adafruit.com/product/1426">Neopixel Bar</a><br/>
+											<a href="https://www.adafruit.com/product/2226">Neopixel Diamond </a><br/>
+											<a href="https://www.adafruit.com/product/1643">Neopixel Ring</a>
+										</p>
+									</div>
+								</li>
+
+
+						</div>
+					</li>
+
+
+
+
+
+
+					<!--
+					<li>
+						<h3 class="cbp-nttrigger">Danish soufflé</h3>
+						<div class="cbp-ntcontent">
+							<p>Lemon drops ice cream I love danish soufflé cake jelly cupcake. Bear claw I love I love tart I love liquorice bear claw. Halvah chocolate gummi bears jelly-o jelly-o lollipop lemon drops liquorice. Candy canes tiramisu candy faworki apple pie. Chocolate jujubes sesame snaps ice cream cupcake. Halvah topping chupa chups biscuit. I love I love chupa chups tootsie roll marshmallow tart gummi bears chocolate.</p>
+							<ul class="cbp-ntsubaccordion">
+								<li>
+									<h4 class="cbp-nttrigger">Biscuit bear claw bear claw</h4>
+									<div class="cbp-ntcontent">
+										<p>Halvah I love jelly beans. Danish I love jelly beans sweet roll tart biscuit. Lemon drops wypas toffee candy canes lemon drops dragée. Sweet roll I love bonbon I love. Liquorice chocolate bar lollipop faworki lollipop sugar plum. Soufflé croissant lemon drops cotton candy. Jelly candy canes cupcake halvah macaroon.</p>
+									</div>
+								</li>
+								<li>
+									<h4 class="cbp-nttrigger">Jujubes bear claw topping applecake</h4>
+									<div class="cbp-ntcontent">
+										<p>Pastry ice cream pie marshmallow muffin gingerbread. Bonbon wafer sweet roll candy lollipop. Sugar plum jujubes sweet roll donut gummi bears chupa chups ice cream. Icing I love apple pie lemon drops faworki sugar plum sweet roll. Marshmallow liquorice cotton candy jujubes chocolate bar fruitcake topping carrot cake. Chocolate croissant cupcake macaroon pastry gummi bears jelly beans. Oat cake bear claw lollipop chocolate cake. Ice cream danish faworki dragée I love chupa chups cotton candy I love. Cookie gummi bears oat cake faworki powder. Wypas jelly bonbon tiramisu apple pie jelly beans.</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<h3 class="cbp-nttrigger">Jujubes bear claw topping</h3>
+						<div class="cbp-ntcontent">
+							<p>Cotton candy chocolate cake macaroon applicake I love. Tart soufflé I love powder. I love tiramisu lollipop pie. Pudding gummi bears sweet. Candy chocolate I love jujubes pie donut. Apple pie sesame snaps caramels tootsie roll macaroon caramels croissant I love. Sweet roll chocolate lemon drops. I love I love muffin gummi bears I love cotton candy.</p>
+							<ul class="cbp-ntsubaccordion">
+								<li>
+									<h4 class="cbp-nttrigger">Faworki jelly pastry</h4>
+									<div class="cbp-ntcontent">
+										<p>Liquorice jelly-o oat cake gingerbread chocolate caramels chupa chups muffin candy. I love dessert biscuit halvah lemon drops. Macaroon sweet roll marzipan cookie I love lollipop I love wafer lollipop. Caramels candy pudding brownie. Oat cake cake gingerbread bear claw croissant dessert. Lemon drops oat cake sugar plum wypas cupcake fruitcake liquorice. Muffin wafer tootsie roll caramels. I love brownie powder icing marzipan dragée. Pie fruitcake soufflé sweet roll faworki candy canes I love. Jelly-o carrot cake donut cheesecake.</p>
+										<ul class="cbp-ntsubaccordion">
+											<li>
+												<h5 class="cbp-nttrigger">Donut pastry</h5>
+												<div class="cbp-ntcontent">
+													<p>Gingerbread cotton candy halvah gingerbread. Apple pie wypas liquorice I love chocolate cake I love. Jelly cotton candy wypas lemon drops. Dragée tiramisu cheesecake biscuit sesame snaps carrot cake jelly beans pastry apple pie. Chocolate cake cotton candy candy canes brownie ice cream. Muffin chocolate cake jelly-o cake pudding. Jujubes I love cookie. I love cupcake I love bear claw sweet croissant. Wypas bonbon chocolate cake bonbon bear claw gummies. Liquorice danish jelly tootsie roll. I love danish icing lemon drops dessert pie jujubes. Fruitcake wafer I love biscuit. Donut pastry apple pie sugar plum soufflé ice cream tart bonbon candy.</p>
+												</div>
+											</li>
+											<li>
+												<h5 class="cbp-nttrigger">Carrot cake</h5>
+												<div class="cbp-ntcontent">
+													<p>Wafer muffin cupcake apple pie tootsie roll I love. Carrot cake apple pie I love dessert. I love carrot cake lollipop jelly jelly-o brownie cake. Croissant brownie donut gingerbread dessert icing. Sugar plum jelly candy pudding liquorice liquorice cotton candy pie. Powder sesame snaps I love chocolate bar bonbon. Pudding gummi bears donut applicake carrot cake I love I love icing cake.</p>
+												</div>
+											</li>
+											<li>
+												<h5 class="cbp-nttrigger">Tootsie roll marshmallow</h5>
+												<div class="cbp-ntcontent">
+													<p>I love tootsie roll marshmallow. Halvah jelly bear claw lemon drops lollipop. Brownie tiramisu I love I love halvah wafer. Powder jelly beans sesame snaps. Powder biscuit I love wypas soufflé apple pie marzipan. Cheesecake apple pie halvah croissant jelly I love.</p>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<h4 class="cbp-nttrigger">Chocolate caramels</h4>
+									<div class="cbp-ntcontent">
+										<p>Faworki oat cake cotton candy cookie ice cream gummi bears. Ice cream bear claw icing macaroon apple pie caramels. Sugar plum applicake candy canes sesame snaps I love. Sugar plum brownie biscuit tiramisu marzipan. Ice cream I love sweet bear claw I love sweet cake tart. Danish marshmallow I love wypas pastry. Chocolate tart macaroon wypas sesame snaps apple pie chocolate sesame snaps. Cotton candy sweet roll pudding oat cake I love marzipan wafer chocolate cake.</p>
+									</div>
+								</li>
+								<li>
+									<h4 class="cbp-nttrigger">Lollipop liquorice</h4>
+									<div class="cbp-ntcontent">
+										<p>Cookie ice cream sweet I love cupcake. Fruitcake topping wafer. Lollipop liquorice I love tart wypas biscuit. Danish jelly-o gingerbread. Faworki jelly pastry. Wypas wypas topping I love I love candy canes liquorice. I love sweet roll fruitcake dragée wafer icing bonbon.</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+		-->
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="js/jquery.cbpNTAccordion.min.js"></script>
+		<script>
+			$( function() {
+				/*
+				- how to call the plugin:
+				$( selector ).cbpNTAccordion( [options] );
+				- destroy:
+				$( selector ).cbpNTAccordion( 'destroy' );
+				*/
+
+				$( '#cbp-ntaccordion' ).cbpNTAccordion();
+
+			} );
+		</script>
+	</body>
+</html>

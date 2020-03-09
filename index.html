@@ -1,225 +1,380 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>flxhbck ~ bits & bobs</title>
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<meta name="author" content="Felix Heibeck" />
-		<link rel="shortcut icon" href="../favicon.ico">
-		<link rel="stylesheet" type="text/css" href="css/default.css" />
-		<link rel="stylesheet" type="text/css" href="css/component.css" />
-		<script src="js/modernizr.custom.js"></script>
-	</head>
-	<body>
-		<div class="container">
-			<header class="clearfix">
-				<h1>flxhbck ~ bits & bobs</h1>
-			</header>
-			<div class="main">
-				<ul id="cbp-ntaccordion" class="cbp-ntaccordion">
-					<li>
-						<h3 class="cbp-nttrigger">IO Molecule</h3>
-						<div class="cbp-ntcontent">
-							<p>IO Molecule is a simple breakout board for exploring interaction & experience design. It's basically a breakout board for the Adafruit Feather platform with JST-SH connectors and some onboard components.</p>
-							<ul class="cbp-ntsubaccordion">
-								<li>
-									<h4 class="cbp-nttrigger">Setup</h4>
-									<div class="cbp-ntcontent">
-										<p>
-											Download the <a href="https://www.arduino.cc/en/Main/Software">Arduino IDE</a> <br/>
-											Follow the steps in <a href="https://learn.adafruit.com/adafruit-feather-32u4-bluefruit-le/setup">this tutorial</a> to install the Adafruit Boards in the IDE<br/>
-											Select the Adafruit Bluefruit Micro board from Tools > Board <br/>
-											Select the correct serial port from Tools > Port <br/>
-											Open the Blink Example from Files > Examples > 01.Basics > Blink <br/>
-											Press the 'upload' icon on the top left and see if it works. <br/>
-											Now download or copy <a href="https://github.com/flxhbck/teaching-material/blob/master/molecule-io/arduino%20template/IOMolecule/IOMolecule.ino">this template project</a> into a sketch and get going! <br/>
-											If you don't have the Neopixel Library, go to Sketch > Include Library > Manage Libraries and install the Adafruit NeoPixel Library.
-										</p>
-									</div>
-								</li>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+  <script src="assets/js/jquery-1.8.3.min.js"></script>
+  <script src="assets/js/p5.min.js"></script>
+
+  <title>Felix Heibeck</title>
+
+</head>
+
+<body>
+
+  <header>
+    <h1><a href="./">Felix Heibeck</a></h1>
+
+    <nav>
+      <!-- <a href="about.html">About</a> -->
+      <a href="https://medium.com/@flxhbck">Medium</a>
+      <a href="https://twitter.com/flxhbck">Twitter</a>
+    </nav>
+  </header>
+
+  <div class="clearfix"></div>
 
 
-								<li>
-									<h4 class="cbp-nttrigger">Pinout</h4>
-									<div class="cbp-ntcontent">
-										<p>
-											You can read which Arduino pins belong to which connector on the <a href="https://github.com/flxhbck/teaching-material/blob/master/molecule-io/arduino%20template/IOMolecule/IOMolecule.ino">template file</a>. <br/>
-											For more details, check out the <a href="https://flxhbck.github.io/img/molecule-io.pdf">(somewhat messy) schematic</a>.
-										</p>
-									</div>
-								</li>
-
-								<li>
-									<h4 class="cbp-nttrigger">Inputs</h4>
-									<div class="cbp-ntcontent">
-										<p>
-											There are 3 different kind of connectors with 2, 3 & 4 wires each. The black wire is always the ground connection and index 0.<br/>
-											Button: solder the two wires diagonally. <br/>
-											Potentiometer: 0 - Left, 1 - Middle, 2 - Right <br/>
-											<a href="https://www.digikey.se/short/jvvvm2">Button (onboard)</a> <br/>
-											<a href="https://www.digikey.se/short/jvvvh0">Button (external)</a> <br/>
-											<a href="https://www.digikey.se/short/jvvvmb">Potentiometer (onboard)</a> <br/>
-											<a href="https://www.digikey.se/short/jvvv9j">Potentiometer (external)</a> <br/>
-											<a href="https://www.adafruit.com/product/165">Temperature Sensor</a> <br/>
-											<a href="https://www.adafruit.com/product/3387">9 DOF IMU</a> <br/>
-											<a href="https://www.adafruit.com/product/1063">Microphone</a> <br/>
-											<a href="https://www.adafruit.com/product/466">Proximity / Light Sensor</a><br/>
-											<a href="https://www.adafruit.com/product/1334">Color Sensor</a> <br/>
-											<a href="https://www.digikey.se/short/jvvvmv">Motion Sensor</a> <br/>
-											<a href="https://www.adafruit.com/product/2748">Light Sensor</a> <br/>
-											<a href="https://www.digikey.se/short/jvvvh4">Magnetic Switch</a> <br/>
-											<a href="https://www.digikey.se/short/jvvv9r">Force Sensing Resistor</a> <br/>
-
-										</p>
-									</div>
-								</li>
-
-								<li>
-									<h4 class="cbp-nttrigger">Outputs</h4>
-									<div class="cbp-ntcontent">
-										<p>
-											<a href="https://www.digikey.se/short/jvvv88">LED </a><br/>
-											<a href="https://www.digikey.se/short/jvvvqd">Piezo </a> <br/>
-											<a href="https://www.digikey.se/short/jvvv82">360 Servo </a><br/>
-											<a href="https://www.adafruit.com/product/711">DC Motor </a><br/>
-											<a href="https://www.adafruit.com/product/1201">Vibrating Mini Motor </a><br/>
-											<a href="https://www.adafruit.com/product/1426">Neopixel Bar</a><br/>
-											<a href="https://www.adafruit.com/product/2226">Neopixel Diamond </a><br/>
-											<a href="https://www.adafruit.com/product/1643">Neopixel Ring</a>
-										</p>
-									</div>
-								</li>
 
 
-						</div>
-					</li>
-
-					<li>
-						<h3 class="cbp-nttrigger">Hyper Island - Experience Prototyping (Nov 2018)</h3>
-						<div class="cbp-ntcontent">
-							<p>A two-day workshop for the Hyper Island Digital Media program that explores the physical digital continuum.</p>
-							<ul class="cbp-ntsubaccordion">
-								<li>
-									<h4 class="cbp-nttrigger">Brief 1: Create a signal that travels from digital to physical</h4>
-									<div class="cbp-ntcontent">
-										<p>Focus on creating something that has very low friction between the digital input and the physical output.</p>
-										</div>
-								</li>
-								<li>
-									<h4 class="cbp-nttrigger">Brief 2: Create a signal that travels from physical to digital.</h4>
-									<div class="cbp-ntcontent">
-										<p>
-											Make an input device. Explore the relationship between interaction with the input device and the action it triggers on the computer.
-											Explore the affordances for your input. Think about these questions: What do you think you could do with it? What gestures do you do intuitively? What cultural references come to mind?
-										</p>
-										<p>
-											To get started, go to Sketch > Include Library > Manage Libraries and install the 'HID-Project' Library. <br/>
-											Make a new sketch and copy this <a href="https://github.com/flxhbck/teaching-material/blob/master/molecule-io/arduino%20templates/HID-Molecule/HID-Molecule.ino">HID molecule template code</a> into it. <br/>
-											For more info about HID commands, you can check the <a href="https://github.com/NicoHood/HID/wiki">HID-project documentation</a>. <br/>
-											You will probably have reselect the port after every time you upload since the arduino will reboot as an HID device.
-										</p>
-										<p>Overall, we recommend to test your inputs without the HID functionality first, as it can be quite tricky to fix bugs :)</p>
-									</div>
-								</li>
 
 
-								<li>
-									<h4 class="cbp-nttrigger">Brief 3: Create a game that spans both digital and physical.</h4>
-									<div class="cbp-ntcontent">
-										<p>You decide what components are physical and which ones are digital. Try to think outside the normal 'sitting still and using your hands' type of games.</p>
-									</div>
-								</li>
-							</ul>
-						</div>
-					</li>
-					<!--
-					<li>
-						<h3 class="cbp-nttrigger">Danish soufflé</h3>
-						<div class="cbp-ntcontent">
-							<p>Lemon drops ice cream I love danish soufflé cake jelly cupcake. Bear claw I love I love tart I love liquorice bear claw. Halvah chocolate gummi bears jelly-o jelly-o lollipop lemon drops liquorice. Candy canes tiramisu candy faworki apple pie. Chocolate jujubes sesame snaps ice cream cupcake. Halvah topping chupa chups biscuit. I love I love chupa chups tootsie roll marshmallow tart gummi bears chocolate.</p>
-							<ul class="cbp-ntsubaccordion">
-								<li>
-									<h4 class="cbp-nttrigger">Biscuit bear claw bear claw</h4>
-									<div class="cbp-ntcontent">
-										<p>Halvah I love jelly beans. Danish I love jelly beans sweet roll tart biscuit. Lemon drops wypas toffee candy canes lemon drops dragée. Sweet roll I love bonbon I love. Liquorice chocolate bar lollipop faworki lollipop sugar plum. Soufflé croissant lemon drops cotton candy. Jelly candy canes cupcake halvah macaroon.</p>
-									</div>
-								</li>
-								<li>
-									<h4 class="cbp-nttrigger">Jujubes bear claw topping applecake</h4>
-									<div class="cbp-ntcontent">
-										<p>Pastry ice cream pie marshmallow muffin gingerbread. Bonbon wafer sweet roll candy lollipop. Sugar plum jujubes sweet roll donut gummi bears chupa chups ice cream. Icing I love apple pie lemon drops faworki sugar plum sweet roll. Marshmallow liquorice cotton candy jujubes chocolate bar fruitcake topping carrot cake. Chocolate croissant cupcake macaroon pastry gummi bears jelly beans. Oat cake bear claw lollipop chocolate cake. Ice cream danish faworki dragée I love chupa chups cotton candy I love. Cookie gummi bears oat cake faworki powder. Wypas jelly bonbon tiramisu apple pie jelly beans.</p>
-									</div>
-								</li>
-							</ul>
-						</div>
-					</li>
-					<li>
-						<h3 class="cbp-nttrigger">Jujubes bear claw topping</h3>
-						<div class="cbp-ntcontent">
-							<p>Cotton candy chocolate cake macaroon applicake I love. Tart soufflé I love powder. I love tiramisu lollipop pie. Pudding gummi bears sweet. Candy chocolate I love jujubes pie donut. Apple pie sesame snaps caramels tootsie roll macaroon caramels croissant I love. Sweet roll chocolate lemon drops. I love I love muffin gummi bears I love cotton candy.</p>
-							<ul class="cbp-ntsubaccordion">
-								<li>
-									<h4 class="cbp-nttrigger">Faworki jelly pastry</h4>
-									<div class="cbp-ntcontent">
-										<p>Liquorice jelly-o oat cake gingerbread chocolate caramels chupa chups muffin candy. I love dessert biscuit halvah lemon drops. Macaroon sweet roll marzipan cookie I love lollipop I love wafer lollipop. Caramels candy pudding brownie. Oat cake cake gingerbread bear claw croissant dessert. Lemon drops oat cake sugar plum wypas cupcake fruitcake liquorice. Muffin wafer tootsie roll caramels. I love brownie powder icing marzipan dragée. Pie fruitcake soufflé sweet roll faworki candy canes I love. Jelly-o carrot cake donut cheesecake.</p>
-										<ul class="cbp-ntsubaccordion">
-											<li>
-												<h5 class="cbp-nttrigger">Donut pastry</h5>
-												<div class="cbp-ntcontent">
-													<p>Gingerbread cotton candy halvah gingerbread. Apple pie wypas liquorice I love chocolate cake I love. Jelly cotton candy wypas lemon drops. Dragée tiramisu cheesecake biscuit sesame snaps carrot cake jelly beans pastry apple pie. Chocolate cake cotton candy candy canes brownie ice cream. Muffin chocolate cake jelly-o cake pudding. Jujubes I love cookie. I love cupcake I love bear claw sweet croissant. Wypas bonbon chocolate cake bonbon bear claw gummies. Liquorice danish jelly tootsie roll. I love danish icing lemon drops dessert pie jujubes. Fruitcake wafer I love biscuit. Donut pastry apple pie sugar plum soufflé ice cream tart bonbon candy.</p>
-												</div>
-											</li>
-											<li>
-												<h5 class="cbp-nttrigger">Carrot cake</h5>
-												<div class="cbp-ntcontent">
-													<p>Wafer muffin cupcake apple pie tootsie roll I love. Carrot cake apple pie I love dessert. I love carrot cake lollipop jelly jelly-o brownie cake. Croissant brownie donut gingerbread dessert icing. Sugar plum jelly candy pudding liquorice liquorice cotton candy pie. Powder sesame snaps I love chocolate bar bonbon. Pudding gummi bears donut applicake carrot cake I love I love icing cake.</p>
-												</div>
-											</li>
-											<li>
-												<h5 class="cbp-nttrigger">Tootsie roll marshmallow</h5>
-												<div class="cbp-ntcontent">
-													<p>I love tootsie roll marshmallow. Halvah jelly bear claw lemon drops lollipop. Brownie tiramisu I love I love halvah wafer. Powder jelly beans sesame snaps. Powder biscuit I love wypas soufflé apple pie marzipan. Cheesecake apple pie halvah croissant jelly I love.</p>
-												</div>
-											</li>
-										</ul>
-									</div>
-								</li>
-								<li>
-									<h4 class="cbp-nttrigger">Chocolate caramels</h4>
-									<div class="cbp-ntcontent">
-										<p>Faworki oat cake cotton candy cookie ice cream gummi bears. Ice cream bear claw icing macaroon apple pie caramels. Sugar plum applicake candy canes sesame snaps I love. Sugar plum brownie biscuit tiramisu marzipan. Ice cream I love sweet bear claw I love sweet cake tart. Danish marshmallow I love wypas pastry. Chocolate tart macaroon wypas sesame snaps apple pie chocolate sesame snaps. Cotton candy sweet roll pudding oat cake I love marzipan wafer chocolate cake.</p>
-									</div>
-								</li>
-								<li>
-									<h4 class="cbp-nttrigger">Lollipop liquorice</h4>
-									<div class="cbp-ntcontent">
-										<p>Cookie ice cream sweet I love cupcake. Fruitcake topping wafer. Lollipop liquorice I love tart wypas biscuit. Danish jelly-o gingerbread. Faworki jelly pastry. Wypas wypas topping I love I love candy canes liquorice. I love sweet roll fruitcake dragée wafer icing bonbon.</p>
-									</div>
-								</li>
-							</ul>
-						</div>
-					</li>
-				</ul>
-			</div>
-		-->
-		</div>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-		<script src="js/jquery.cbpNTAccordion.min.js"></script>
-		<script>
-			$( function() {
-				/*
-				- how to call the plugin:
-				$( selector ).cbpNTAccordion( [options] );
-				- destroy:
-				$( selector ).cbpNTAccordion( 'destroy' );
-				*/
 
-				$( '#cbp-ntaccordion' ).cbpNTAccordion();
 
-			} );
-		</script>
-	</body>
-</html>
+  <div class="gridcontainer">
+
+    <section id="Hero" class="hero">
+      <p>
+        Hej, I’m Felix 👋🏼 <br />
+        I am an interaction designer, technologist, and angry optimist with a passion for creating responsibly delightful products &amp; interactions.
+      </p>
+    </section>
+
+
+
+    <section class="summary">
+      <p>
+        I work at
+        <a href="http://www.above.se/">Above</a> in Malm&ouml;, where we often work through
+        <a href="https://medium.com/a-view-from-above/exploratory-prototyping-in-product-design-6d89ff17f542" class="combolink link exploratoryproto" id="exploratoryproto-link">exploratory prototyping</a> on products that I mostly can't talk about yet.
+      </p>
+    </section>
+
+
+    <figure class="project effect">
+      <a href="https://medium.com/a-view-from-above/exploratory-prototyping-in-product-design-6d89ff17f542" class="combolink video exploratoryproto" id="exploratoryproto-imagelink">
+        <video muted loop width="100%" id="exploratoryproto-video">
+          <source src="assets/handbrake/exploratoryprototyping.mp4">
+        </video>
+          <p><span>Exploratory Protyping</span></p>
+      </a>
+    </figure>
+
+
+    <figure class="project effect">
+      <a class="combolink video dell" id="dell-imagelink">
+        <video muted loop width="100%" id="dell-video">
+          <source src="assets/handbrake/dell.mp4">
+        </video>
+          <p><span> </span></p>
+      </a>
+    </figure>
+
+
+
+    <figure class="project effect">
+      <a href="https://dscout.com/people-nerds/kirsten-lewis-agile-research-prototypes-sonos" class="combolink video sonos" id="sonos-imagelink">
+        <video muted loop width="100%" id="sonos-video">
+          <source src="assets/handbrake/sonos.mp4">
+        </video>
+          <p><span> </span></p>
+      </a>
+    </figure>
+
+
+
+
+
+
+
+
+
+
+
+
+    <section id="Teaching" class="summary">
+      <p>
+        Sometimes I get to teach classes and worskops on
+        <a href="" class="combolink link sustainability" id="sustainability-link">design for sustainability</a> (at CIID),
+        <a href="" class="combolink link hyperisland" id="hyperisland-link"> tangible interfaces</a> and
+        <a href="http://pneuduino.org/projects/" class="combolink link inflatingcuriosity" id="inflatingcuriosity-link">interactive inflatables</a>, amongst other things.
+      </p>
+    </section>
+
+
+
+    <figure class="project" >
+      <a href="https://medium.com/a-view-from-above/sustainable-user-experience-8260006f5232" class="combolink video sustainability" id="sustainability-imagelink">
+        <video muted loop width="100%" id="sustainability-video">
+          <source src="assets/handbrake/sustainableclass.mp4">
+        </video>
+        <p><span>Design for Sustainability</span></p>
+      </a>
+    </figure>
+
+    <figure class="project" >
+      <a href="" class="combolink video hyperisland" id="hyperisland-imagelink">
+        <video muted loop width="100%" id="hyperisland-video">
+          <source src="assets/handbrake/hyperisland.mp4">
+        </video>
+        <p><span>Tangible Interfaces</span></p>
+
+      </a>
+    </figure>
+
+    <figure class="project" >
+      <a href="http://pneuduino.org/projects/" class="combolink video inflatingcuriosity" id="inflatingcuriosity-imagelink">
+        <video muted loop width="100%" id="inflatingcuriosity-video">
+          <source src="assets/handbrake/inflatingcuriosity.mp4">
+        </video>
+        <p><span>Interactive Inflatables</span></p>
+      </a>
+    </figure>
+
+
+
+
+
+
+    <section id="Teague" class="summary">
+      <p>
+        When I worked at
+        <a href="http://teague.com/">TEAGUE</a> I helped understand how design can create
+        <a href="https://www.youtube.com/watch?v=YdEjbHzMAiM" class="combolink link autonomoustrust" id="autonomoustrust-link">trust in autonomous vehicles</a>, used
+        <a href="https://medium.com/teague-labs/prototyping-car-ux-in-vr-461d8442b6e2" class="combolink link vrproto" id="vrproto-link">VR to prototype Car UX</a>, and explored what
+        <a href="https://medium.com/teague-labs/crossing-the-road-in-the-world-of-autonomous-cars-e14827bfa301" class="combolink link crossingroad" id="crossingroad-link">crossing a street of autonomous cars</a> might feel like.
+      </p>
+    </section>
+
+    <figure class="project" >
+      <a href="https://www.youtube.com/watch?v=YdEjbHzMAiM" class="combolink video autonomoustrust" id="autonomoustrust-imagelink">
+        <video muted loop width="100%" preload="metadata" id="autonomoustrust-video" >
+          <source src="assets/handbrake/autonomous-trust.mp4#t=2">
+        </video>
+        <p><span>Trust in autonomous cars</span></p>
+      </a>
+    </figure>
+
+
+    <figure class="project" >
+      <a href="https://medium.com/teague-labs/prototyping-car-ux-in-vr-461d8442b6e2" class="combolink video vrproto" id="vrproto-imagelink">
+        <video muted loop width="100%" id="vrproto-video" >
+          <source src="assets/handbrake/VR-proto.mp4">
+        </video>
+        <p><span>VR prototyping Car UX</span></p>
+      </a>
+    </figure>
+
+    <figure class="project" >
+      <a href="https://medium.com/teague-labs/crossing-the-road-in-the-world-of-autonomous-cars-e14827bfa301" class="combolink video crossingroad" id="crossingroad-imagelink">
+        <video muted loop width="100%" id="crossingroad-video">
+          <source src="assets/handbrake/crossingstreet.mp4">
+        </video>
+        <p><span>Crossing the autonomous road</span></p>
+      </a>
+    </figure>
+
+
+
+
+
+
+
+
+
+    <section id="TeagueLabs" class="summary">
+      <p>
+        At TEAGUE Labs, I also lead efforts that proposed a
+        <a href="https://medium.com/teague-labs/filo-c24aa62bef2a" class="combolink link filo" id="filo-link">lightbulb with graceful obsolescence</a>, imagined novel ways to
+        <a href="https://medium.com/teague-labs/tap-to-tweak-ca55afdaf3fc" class="combolink link taptotweak" id="taptotweak-link">control IoT devices</a>, and built an
+        <a href="https://medium.com/teague-labs/charging-docks-in-the-connected-home-2f483c1ef340" class="combolink link alarm" id="alarm-link">alarm clock that charges your phone</a>.
+      </p>
+    </section>
+
+    <figure class="project" >
+      <a href="https://medium.com/teague-labs/filo-c24aa62bef2a" class="combolink video filo" id="filo-imagelink">
+        <video muted loop width="100%" preload="metadata" id="filo-video">
+          <source src="assets/handbrake/filo.mp4#t=5.5">
+        </video>
+        <p><span>Filo - modular lightbulb</span></p>
+      </a>
+    </figure>
+
+    <figure class="project" >
+      <a href="https://medium.com/teague-labs/tap-to-tweak-ca55afdaf3fc" class="combolink video taptotweak" id="taptotweak-imagelink">
+        <video muted loop width="100%" preload="metadata" id="taptotweak-video" >
+          <source src="assets/handbrake/taptotweak.mp4#t=5">
+        </video>
+        <p><span>Tap to Tweak</span></p>
+      </a>
+    </figure>
+
+    <figure class="project" >
+      <a href="https://medium.com/teague-labs/charging-docks-in-the-connected-home-2f483c1ef340" class="combolink video alarm" id="alarm-imagelink">
+        <video muted loop width="100%" id="alarm-video">
+          <source src="assets/handbrake/alarmdock.mp4">
+        </video>
+        <p><span>Alarm Dock</span></p>
+      </a>
+    </figure>
+
+
+
+
+
+
+
+
+    <section id="ML-MS" class="summary">
+      <p>
+        During my Masters at the MIT Media Lab I developed <a href="https://tangible.media.mit.edu/project/unimorph/" class="combolink link unimorph" id="unimorph-link">thin-film interfaces that bend</a>, created a <a href="http://pneuduino.org/toolkit/" class="combolink link pneuduino" id="pneuduino-link">toolkit for interactive inflatables</a>, and co-authored a paper on <a href="https://tangible.media.mit.edu/project/aeromorph/" class="combolink link aeromorph" id="aeromorph-link">designing inflatables from various materials</a>.
+      </p>
+    </section>
+
+
+    <figure class="project" >
+      <a href="https://tangible.media.mit.edu/project/unimorph/" class="combolink video unimorph" id="unimorph-imagelink">
+        <video muted loop width="100%" preload="metadata" id="unimorph-video">
+          <source src="assets/handbrake/unimorph.mp4#t=5.8">
+        </video>
+        <p><span>uniMorph</span></p>
+      </a>
+    </figure>
+
+    <figure class="project" >
+      <a href="http://pneuduino.org/toolkit/" class="combolink video pneuduino" id="pneuduino-imagelink">
+        <video muted loop width="100%" id="pneuduino-video">
+          <source src="assets/handbrake/pneuduino.mp4">
+        </video>
+        <p><span>Pneuduino</span></p>
+      </a>
+    </figure>
+
+    <figure class="project" >
+      <a href="https://tangible.media.mit.edu/project/aeromorph/" class="combolink video aeromorph" id="aeromorph-imagelink">
+        <video muted loop width="100%" preload="metadata" id="aeromorph-video">
+          <source src="assets/handbrake/aeromorph.mp4#t=2">
+        </video>
+        <p><span>aeroMorph</span></p>
+      </a>
+    </figure>
+
+
+
+
+
+    <section class="summary">
+
+      <p>
+        Some older projects I worked on and am still somewhat proud of include a
+        <a href="https://vimeo.com/56011933" class="combolink link cuboino" id="cuboino-link">digital / analog marble game</a>, a design fiction project about a
+        <a href="https://www.fastcompany.com/3026104/a-wearable-book-that-programs-you-with-feelings" class="combolink link sensoryfiction" id="sensoryfiction-link">book that makes you feel things</a> (literally), and co-authoring a paper on
+        <a href="https://tangible.media.mit.edu/project/thaw/" class="combolink link thaw" id="thaw-link">interactions with phones on screens</a>
+      </p>
+    </section>
+
+    <figure class="project" >
+      <a href="https://vimeo.com/56011933" class="combolink video cuboino" id="cuboino-imagelink">
+        <video muted loop width="100%" preload="metadata" id="cuboino-video">
+          <source src="assets/handbrake/cuboino.mp4#t=7.5" >
+        </video>
+        <p><span>Cuboino</span></p>
+      </a>
+    </figure>
+
+
+    <figure class="project" >
+      <a href="https://www.fastcompany.com/3026104/a-wearable-book-that-programs-you-with-feelings" class="combolink video sensoryfiction" id="sensoryfiction-imagelink">
+        <video muted loop width="100%" id="sensoryfiction-video">
+          <source src="assets/handbrake/sensoryfiction.mp4">
+        </video>
+        <p><span>Sensory Fiction</span></p>
+      </a>
+    </figure>
+
+
+    <figure class="project" >
+      <a href="https://tangible.media.mit.edu/project/thaw/" class="combolink video thaw" id="thaw-imagelink">
+        <video muted loop width="100%" id="thaw-video">
+          <source src="assets/handbrake/thaw.mp4">
+        </video>
+        <p><span>THAW</span></p>
+      </a>
+    </figure>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <section id="footer">
+      <p>
+        Get in touch for anything from work inquiries, speaking engagements, or simply to connect!  <br/>
+        If you are around Malm&ouml;, I am happy to grab a coffee with you!  <br/>
+        <br/>
+        You can find me on <a href="https://twitter.com/flxhbck">Twitter</a>, sporadically on
+        <a href="https://www.linkedin.com/in/felix-heibeck-0b9764b3/">LinkedIn</a>, and usually via email: fel.heibeck (at) gmail.com <br />
+      </p>
+
+      <span>Made by Felix Heibeck. (c) 2019</span>
+  </section>
+
+
+  <script>
+  $(document).ready(function(){
+
+    $(".combolink").hover(
+         function(){
+           var classList = this.className.split(' ');
+           var projectname = classList[2];
+
+           var video = document.getElementById(projectname+"-video");
+           video.currentTime = 0;
+           if (video != null) video.play();
+
+           if ($(this).is(".video")){
+             var link = document.getElementById(projectname+"-link");
+             var position = $(window).scrollTop();
+             if (link != null) link.focus();
+             $(window).scrollTop(position);
+           } else {
+             var link = document.getElementById(projectname+"-imagelink");
+             var position = $(window).scrollTop();
+             if (link != null) link.focus();
+             $(window).scrollTop(position);
+           }
+
+         },
+         function(){
+           var classList = this.className.split(' ');
+           var projectname = classList[2];
+
+           var video = document.getElementById(projectname+"-video");
+           if(video != null) video.pause();
+
+           var link = document.getElementById(projectname+"-link");
+           if (link != null) link.blur();
+
+           var imagelink = document.getElementById(projectname+"-imagelink");
+           if (typeof(imageLink) != "undefined" ) imagelink.blur();
+         }
+     );
+  });
+  </script>
+
+
+  </body>
+
+  </html>
