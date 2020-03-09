@@ -41,7 +41,7 @@
 
     <section id="Hero" class="hero">
       <p>
-        Hej, I’m Felix 👋🏼 <br />
+        Hej, I’m Felix 👋<br />
         I am an interaction designer, technologist, and angry optimist with a passion for creating responsibly delightful products &amp; interactions.
       </p>
     </section>
@@ -335,7 +335,30 @@
   <script>
   $(document).ready(function(){
 
-    $(".combolink").hover(
+
+    $('#combolink').on('touchstart', function(e) {
+      var classList = this.className.split(' ');
+      var projectname = classList[2];
+
+      var video = document.getElementById(projectname+"-video");
+      video.currentTime = 0;
+      if (video != null) video.play();
+
+      if ($(this).is(".video")){
+        var link = document.getElementById(projectname+"-link");
+        var position = $(window).scrollTop();
+        if (link != null) link.focus();
+        $(window).scrollTop(position);
+      } else {
+        var link = document.getElementById(projectname+"-imagelink");
+        var position = $(window).scrollTop();
+        if (link != null) link.focus();
+        $(window).scrollTop(position);
+    }
+  });
+
+
+    $(".combolink").hover (
          function(){
            var classList = this.className.split(' ');
            var projectname = classList[2];
@@ -371,6 +394,9 @@
            if (typeof(imageLink) != "undefined" ) imagelink.blur();
          }
      );
+
+
+
   });
   </script>
 
