@@ -335,27 +335,9 @@
   <script>
   $(document).ready(function(){
 
-
-    $('#combolink').on('touchstart', function(e) {
-      var classList = this.className.split(' ');
-      var projectname = classList[2];
-
-      var video = document.getElementById(projectname+"-video");
-      video.currentTime = 0;
-      if (video != null) video.play();
-
-      if ($(this).is(".video")){
-        var link = document.getElementById(projectname+"-link");
-        var position = $(window).scrollTop();
-        if (link != null) link.focus();
-        $(window).scrollTop(position);
-      } else {
-        var link = document.getElementById(projectname+"-imagelink");
-        var position = $(window).scrollTop();
-        if (link != null) link.focus();
-        $(window).scrollTop(position);
+    if(window.innerwidth < 768){
+      return;
     }
-  });
 
 
     $(".combolink").hover (

@@ -542,6 +542,35 @@ section p a:hover::after, section p a:focus::after {
     white-space: normal !important;
   }
 
+  .project > a:hover video,  .project > a:focus video{
+   opacity: 0;
+  }
+
+  section p a{
+    text-decoration: none;
+    color: black;
+    position: relative;
+    transition: color .15s ease-in-out;
+    text-decoration: underline;
+
+  }
+
+  section p a::after {
+      content: "";
+      position: relative;
+  }
+
+  section p a:hover::after, section p a:focus::after {
+      top: 0%;
+  }
+
+  section p a:hover, section p a:focus {
+    color: #000;
+    text-decoration: underline;
+  }
+
+
+
 
 
   }
@@ -590,6 +619,9 @@ section p a:hover::after, section p a:focus::after {
 
   .aboutcontainer > .entry {
     grid-column: 2 / 4;
+  }
+  .project > a:hover video,  .project > a:focus video{
+   opacity: 0;
   }
 
 
